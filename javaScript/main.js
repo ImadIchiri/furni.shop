@@ -155,7 +155,7 @@ const filterProducts = (category) => {
   }
   if (!productListLength) {
     productsContainer.innerHTML =
-      "<span></span><h3 class='empty'>No Products To Show Here</h3><span></span>";
+      "<h3 class='empty'>No Products To Show Here</h3>";
   }
   productListLength = 0;
 };
