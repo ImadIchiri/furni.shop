@@ -28,13 +28,16 @@ addEvent([hamburgerMenu], "click", () => {
   mainMenu.style.transform = "scaleY(1)";
 });
 
-addEvent([window], "resize", () => {
-  if (window.innerWidth <= 940) {
-    // Close The Main__Menu
-    addEvent([closeMenu, ...listItems], "click", () => {
-      mainMenu.style.transform = "scaleY(0)";
-    });
-  }
+// Close The Main__Menu
+if (window.innerWidth <= 940) {
+  addEvent([...listItems], "click", () => {
+    mainMenu.style.transform = "scaleY(0)";
+  });
+}
+
+// Close The Main__Menu
+addEvent([closeMenu], "click", () => {
+  mainMenu.style.transform = "scaleY(0)";
 });
 
 /*-------------------------------------*\
