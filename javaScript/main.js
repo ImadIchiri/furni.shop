@@ -56,7 +56,7 @@ let mainImageIndex = 1;
 
 const setHomeImage = (imageNumber) => {
   const setHeight = (100 * imageNumber) / 6;
-  homeContainer.style.backgroundImage = `url(../images/home/homePage-${imageNumber}.png)`;
+  homeContainer.style.backgroundImage = `url('../images/home/homePage-${imageNumber}.png')`;
   lineSize.style.height = `${setHeight}%`;
   currentNumber.textContent = `0${imageNumber}`;
 };
