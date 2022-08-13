@@ -73,7 +73,7 @@ a {
 \*-------------------------------------*/
 .search_section {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   top: 0;
   right: 0;
   height: 100%;
@@ -132,7 +132,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 999;
   min-height: 100px;
   display: flex;
   justify-content: space-between;
