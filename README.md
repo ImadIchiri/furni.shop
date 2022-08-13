@@ -13,8 +13,8 @@ LinkedIn: <a href='https://www.linkedin.com/in/imad-ichiri-577a91203' target='_b
 
 ### 1st ScreenShoot (For Laptops)
 
-<img src='screenShots/laptop.png'>
+<img src='screenShots/laptopScreen.png'>
 
 ### 2nd ScreenShoot (For Mobiles)
 
-<img src='screenShots/mobile.png'>
+<img src='screenShots/mobileScreen.png'>
