@@ -2,6 +2,8 @@
 
 ## Live demo <a href='https://imadichiri.github.io/furni.shop/' target='_blank'>from here</a>
 
+## Tools used are: ['HTML5', 'CSS3', 'JavaScript', 'ES6', 'ResponsiveDesign']
+
 ### About The Design
 You Can Find It By Following 
 <a href='https://dribbble.com/shots/16169012-website-landing-page-design' target='_blank'>This Link</a>
