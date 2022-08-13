@@ -4,6 +4,8 @@
 :root {
   --primary-font: "Montserrat", sans-serif;
   --secondary-font: "Noto Serif", serif;
+  --main-margin: 100px;
+  --main-Padding: 120px;
 }
 /*-------------------------------------*\
     #End Variables
@@ -126,11 +128,17 @@ a {
     #Start Header Section
 \*-------------------------------------*/
 .main_header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   min-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px 0px #244d4d;
 }
 .main_header .logo {
   height: auto;
@@ -290,7 +298,10 @@ a {
     #Start Home Section
 \*-------------------------------------*/
 .home {
+  padding-top: var(--main-margin);
   position: relative;
+  min-height: 500px;
+  max-height: 1000px;
   width: 100%;
   height: calc(100vh - 100px);
 }
@@ -300,7 +311,7 @@ a {
   display: flex;
   align-items: center;
   background-color: #244d4d;
-  background-image: url(../images/home/homePage-1.png);
+  background-image: url(../images/home_images/homePage-1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -336,7 +347,7 @@ a {
   left: 120px;
   width: 100px;
   height: 116px;
-  background-image: url(../images/icons/dots.png);
+  background-image: url(../images/icons_images/dots.png);
 }
 @media (max-width: 520px) {
   .home .home__text {
@@ -439,7 +450,7 @@ a {
     #Start Companies Section
 \*-------------------------------------*/
 .companies {
-  padding: 60px 0px;
+  padding: calc(var(--main-Padding) - 40px) 0px;
   background-color: #f4f6f6;
 }
 .companies .title {
@@ -450,7 +461,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  margin-bottom: 2.6rem;
+  margin-bottom: 3rem;
 }
 .companies .container {
   display: flex;
@@ -482,7 +493,7 @@ a {
   align-items: center;
   flex-wrap: wrap;
   gap: 4rem;
-  padding: 60px 8%;
+  padding: var(--main-Padding) 8% 0;
   background-color: #fff;
 }
 .hot_deals .main_text {
@@ -550,8 +561,8 @@ a {
     #Start AboutUs Section
 \*-------------------------------------*/
 .about .holder {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--main-Padding);
+  padding-bottom: 0;
   background-color: #fff;
   max-width: 1900px;
 }
@@ -672,8 +683,8 @@ a {
 \*-------------------------------------*/
 .products .holder {
   background-color: #fff;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--main-Padding);
+  padding-bottom: var(--main-Padding);
 }
 .products .products_header {
   display: flex;
@@ -759,6 +770,8 @@ a {
   color: #3d3d3f;
 }
 .products .container {
+  position: relative;
+  min-height: 250px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
   justify-content: center;
@@ -824,12 +837,17 @@ a {
   transform: translateY(40%);
 }
 .products .empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 30px;
   text-align: center;
   letter-spacing: -0.01em;
   color: #3a4f65;
+  user-select: none;
 }
 /*-------------------------------------*\
     #End Products Section
@@ -845,7 +863,7 @@ a {
 .testimonials .container {
   max-width: 1900px;
   position: relative;
-  padding: 100px 1rem 100px;
+  padding: var(--main-Padding) 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -985,7 +1003,7 @@ a {
   background-color: #244d4d;
 }
 .contact .holder {
-  padding-top: 60px;
+  padding-top: var(--main-Padding);
   padding-bottom: 60px;
   display: flex;
   align-items: center;
@@ -1055,8 +1073,8 @@ a {
 }
 .main_footer .holder {
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--main-Padding);
+  padding-bottom: var(--main-Padding);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
