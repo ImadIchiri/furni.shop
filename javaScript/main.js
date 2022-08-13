@@ -26,14 +26,24 @@ const listItems = document.querySelectorAll(".list_item a");
 // Open The Main__Menu
 addEvent([hamburgerMenu], "click", () => {
   mainMenu.style.transform = "scaleY(1)";
+
+  // Add Event Listener 'Click' Ti ListItems
+  // In Order To Close The Main__Menu
+  addEvent([...listItems], "click", () => {
+    if (window.innerWidth <= 910) {
+      mainMenu.style.transform = "scaleY(0)";
+    }
+  });
 });
 
-// Close The Main__Menu
-if (window.innerWidth <= 940) {
-  addEvent([...listItems], "click", () => {
+// In Order To Show The Main__Menu Again After Resizing The Screen
+addEvent([window], "resize", () => {
+  if (window.innerWidth <= 910) {
     mainMenu.style.transform = "scaleY(0)";
-  });
-}
+  } else {
+    mainMenu.style.transform = "scaleY(1)";
+  }
+});
 
 // Close The Main__Menu
 addEvent([closeMenu], "click", () => {
@@ -56,7 +66,7 @@ let mainImageIndex = 1;
 
 const setHomeImage = (imageNumber) => {
   const setHeight = (100 * imageNumber) / 6;
-  homeContainer.style.backgroundImage = `url('images/home/homePage-${imageNumber}.png')`;
+  homeContainer.style.backgroundImage = `url('images/home_images/homePage-${imageNumber}.png')`;
   lineSize.style.height = `${setHeight}%`;
   currentNumber.textContent = `0${imageNumber}`;
 };
@@ -155,7 +165,7 @@ const filterProducts = (category) => {
   }
   if (!productListLength) {
     productsContainer.innerHTML =
-      "<span></span><h3 class='empty'>No Products To Show Here</h3><span></span>";
+      "<h3 class='empty'>No Products To Show Here</h3>";
   }
   productListLength = 0;
 };
