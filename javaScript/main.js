@@ -22,6 +22,7 @@ const hamburgerMenu = document.getElementById("toggle_menu");
 const closeMenu = document.getElementById("close_menu");
 const mainMenu = document.getElementById("main_nav");
 const listItems = document.querySelectorAll(".list_item a");
+const searchIcon = document.getElementById("search");
 
 // Open The Main__Menu
 addEvent([hamburgerMenu], "click", () => {
@@ -29,7 +30,7 @@ addEvent([hamburgerMenu], "click", () => {
 
   // Add Event Listener 'Click' Ti ListItems
   // In Order To Close The Main__Menu
-  addEvent([...listItems], "click", () => {
+  addEvent([...listItems, searchIcon], "click", () => {
     if (window.innerWidth <= 910) {
       mainMenu.style.transform = "scaleY(0)";
     }
