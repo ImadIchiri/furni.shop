@@ -53,6 +53,24 @@ let productsList = [
     altImage: "Product Image 6",
     category: "Chair",
   },
+  {
+    id: 6,
+    title: "Sofa",
+    newPrice: 150.0,
+    oldPrice: 250.0,
+    image: "images/products_images/Image-7.png",
+    altImage: "Product Image 7",
+    category: "Sofa",
+  },
+  {
+    id: 7,
+    title: "Sofa",
+    newPrice: 98.99,
+    oldPrice: 120.0,
+    image: "images/products_images/Image-8.png",
+    altImage: "Product Image 8",
+    category: "Sofa",
+  },
 ];
 
 export default productsList;
